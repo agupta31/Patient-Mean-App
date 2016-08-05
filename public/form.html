@@ -1,0 +1,19 @@
+
+<table class="table table-bordered">
+    <thead>
+         <tr>
+            <th>id</th>
+            <th>LastName</th>
+            <th>FirstName</th>
+            <th>town</th>
+         </tr>
+    </thead>
+      <tbody>
+           <tr ng-repeat="item in resultList">
+              <td><a href="#/meds/{{item._id}}">{{item.id}}</a></td>
+              <td>{{item.lastName}}</td>
+              <td>{{item.firstName}}</td>
+              <td>{{item.town}}</td>
+           </tr>
+      </tbody>
+</table>

@@ -1,0 +1,40 @@
+
+<br>
+
+<table class='table table-bordered'>
+   <thead>
+       <tr>
+         <th>Medname</th>
+         <th>dose</th>
+         <th>Start Date</th>
+         <th>Stop Date</th>
+       </tr>
+   </thead>
+     <tbody>
+         <tr ng-repeat="med in meds.Medications">
+            <td>{{med.medname}}</td>
+            <td>{{med.dose}}</td>
+            <td>{{med.startDate}}</td>
+            <td>{{med.stopDate}}</td>
+         </tr>
+     </tbody>
+</table>
+</div>
+
+<div>
+    <ul>
+     <li>temperature:{{meds.temperature}}</li>
+     <li>pulse:{{meds.pulse}}</li>
+     <button class="btn btn-success" ng-click="editData(meds)">Edit</button>
+     <ul>
+  </div>
+
+  <div class="input-fields">
+    <label for="temp">Temperature</label>
+    <input type="text" ng-model="temperature" id="temp">
+
+    <label for="pulse">Pulse</label>
+    <input type="text" ng-model="pulse" id="pulse">
+
+    <button class="btn btn-primary" ng-click="updateItem()">Update</button>
+  </div>
